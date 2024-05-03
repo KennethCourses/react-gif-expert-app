@@ -6,7 +6,8 @@ const GifExpertApp = () => {
     const [categories, setCategories] = useState(['Invencible']);
 
     const onAddCategory = (newCategory) => {
-        setCategories([newCategory, ...categories]);
+        const category = newCategory.toLowerCase();
+        categories.includes(category) ? alert('Category Already Exists') : setCategories([category, ...categories]);
     }
 
     return (
