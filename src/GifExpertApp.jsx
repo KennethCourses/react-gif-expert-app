@@ -4,7 +4,7 @@ import GifGrid from './components/GifGrid';
 
 const GifExpertApp = () => {
 
-    const [categories, setCategories] = useState([]);
+    const [categories, setCategories] = useState(['SPIDER-MAN']);
 
     const onAddCategory = (newCategory) => {
         const category = newCategory.toUpperCase();
