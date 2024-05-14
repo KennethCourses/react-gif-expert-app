@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing to GifItem component. Should show the component correctly 1`] = `
+<div>
+  <div
+    class="card"
+  >
+    <img
+      alt="Kenneth"
+      src="https://localhost/image.jpg"
+    />
+    <p>
+      Kenneth
+    </p>
+  </div>
+</div>
+`;
