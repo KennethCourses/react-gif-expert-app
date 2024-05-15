@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import GifItem from '../../src/components/GifItem';
 
 describe('Testing to GifItem component.', () => {
@@ -16,5 +16,31 @@ describe('Testing to GifItem component.', () => {
         )
 
         expect(container).toMatchSnapshot();
+    })
+
+    test('Should show the image with URL and description alt', () => {
+
+        render(
+            <GifItem
+                title={title}
+                url={url}
+            />
+        )
+
+        const { src, alt } = screen.getByRole('img');
+        expect(src).toBe(url);
+        expect(alt).toBe(title);
+    })
+
+    test('Should show title', () => {
+
+        render(
+            <GifItem
+                title={title}
+                url={url}
+            />
+        )
+
+        expect(screen.getByText(title)).toBeTruthy();
     })
 })
